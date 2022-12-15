@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    /* colors */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+body * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+}
+
+@media screen and (min-width:376px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 2rem;
+        background:
+            url(/images/bg-pattern-top-desktop.svg) no-repeat 3rem 0rem,
+            url(/images/bg-pattern-bottom-desktop.svg) no-repeat 32rem 8rem;
+        background-color: var(--White);
+        min-height: 100vh;
+
+    }
+
+    #main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 1rem;
+        width: 62rem;
+    }
+
+    .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card {
+        width: 20rem;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card__header {
+        color: var(--Very-Dark-Magenta);
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card__text {
+        color: var(--Dark-Grayish-Magenta);
+        line-height: 1.3rem;
+    }
+
+    .card--large {
+        width: 24rem;
+    }
+
+    .card--top-big {
+        position: relative;
+        top: 3rem;
+    }
+
+    .rate {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 1.5rem;
+        background-color: var(--Light-Grayish-Magenta);
+        margin-bottom: 0.7rem;
+        padding: 0.9rem;
+        border-radius: 0.5rem;
+    }
+
+    .rate__list {
+        display: flex;
+        flex-direction: row;
+        column-gap: 0.2rem;
+        list-style: none;
+    }
+
+    .rate__star {
+        width: 85%;
+    }
+
+    .rate__text {
+        color: var(--Very-Dark-Magenta);
+        font-weight: bold;
+    }
+
+    .rate--right-big {
+        position: relative;
+        right: 5rem;
+    }
+
+    .rate--right-mid {
+        position: relative;
+        right: 2.6rem;
+    }
+
+
+
+    .card-comment {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: var(--Very-Dark-Magenta);
+        width: 100%;
+        height: 90%;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .card-comment--top-big {
+        position: relative;
+        top: 2rem;
+    }
+
+    .card-comment--top-mid {
+        position: relative;
+        top: 1rem;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+    }
+
+    .profile__image {
+        width: 2.5rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    .profile__name {
+        color: var(--White);
+    }
+
+    .profile__verified {
+        color: var(--Soft-Pink);
+        font-size: 0.9rem;
+    }
+
+    .card-comment__text {
+        color: var(--Light-Grayish-Magenta);
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .attribution__text {
+        color: var(--Very-Dark-Magenta);
+    }
+
+    .attribution__link {
+        text-decoration: none;
+        color: var(--Soft-Pink);
+    }
+}
+
+@media screen and (max-width: 375.98px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2rem;
+        background:
+            url(/images/bg-pattern-top-mobile.svg) no-repeat 8rem -4.5rem,
+            url(/images/bg-pattern-bottom-mobile.svg) no-repeat 32rem 8rem;
+        background-color: var(--White);
+        min-height: 100vh;
+    }
+
+    #main-container,
+    .attribution {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card__header {
+        color: var(--Very-Dark-Magenta);
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 4rem 0 0 0;
+    }
+
+    .card__text {
+        color: var(--Dark-Grayish-Magenta);
+        line-height: 1.3rem;
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 1rem 0;
+    }
+
+    .rate {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--Light-Grayish-Magenta);
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        padding: 0.6rem;
+        width: 100%;
+    }
+
+    .rate__list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0.4rem;
+    }
+
+    .rate__text {
+        color: var(--Very-Dark-Magenta);
+        font-weight: bold;
+        margin: 0.4rem;
+    }
+
+    .rate__star {
+        margin: 0 0.2rem;
+    }
+
+    .card-comment {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: var(--Very-Dark-Magenta);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+    }
+
+    .profile__image {
+        width: 2.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    .profile__name {
+        color: var(--White);
+    }
+
+    .profile__verified {
+        color: var(--Soft-Pink);
+        font-size: 0.9rem;
+    }
+
+    .card-comment__text {
+        color: var(--Light-Grayish-Magenta);
+        font-size: 1.1rem;
+        line-height: 1.2rem;
+        margin: 1rem 0;
+    }
+
+    .attribution__text {
+        color: var(--Very-Dark-Magenta);
+    }
+
+    .attribution__link {
+        text-decoration: none;
+        color: var(--Soft-Pink);
+    }
+
+}
